@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.currencyconverter.R
 import com.example.currencyconverter.repo.CurrencyItem
 
-class CurrencyItemAdapter(private val currencyItemList: List<CurrencyItem>): RecyclerView.Adapter<CurrencyItemAdapter.CurrencyItemViewHolder>() {
+class CurrencyItemAdapter(val currencyItemList: MutableList<CurrencyItem>): RecyclerView.Adapter<CurrencyItemAdapter.CurrencyItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyItemViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.rv_currency_item, parent, false)
