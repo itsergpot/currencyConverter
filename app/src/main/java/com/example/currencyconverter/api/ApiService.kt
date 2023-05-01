@@ -1,5 +1,6 @@
 package com.example.currencyconverter.api
 
+import com.example.currencyconverter.BuildConfig
 import com.example.currencyconverter.pojo.SymbolsListRawData
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
@@ -10,7 +11,7 @@ interface ApiService {
     // Returns all available currencies
     @GET("symbols")
     fun getCurrencies(
-        @Header(HEADER_PARAM_API_KEY) apikey: String = ""
+        @Header(HEADER_PARAM_API_KEY) apikey: String = BuildConfig.API_KEY
     ): Single<SymbolsListRawData>
 
     companion object {
